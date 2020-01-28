@@ -51,34 +51,8 @@ This session is good for people whose geocoding needs have outgrown point-and-cl
 - If you just need the location of the address, use the [Locations](https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?form) search.
 
 # Writing some code
-- Now that we know (most of) our addresses will work with the one-line address search, let's implement that in code.
-
-- set up request URL and parameters
-- csv.reader
-- loop through rows, make request for each
-- limit to first few rows for testing
-- view url, click on a few
-- when those are working, view json
-- census returns json even if there are no matches, so we need to check whether there is a match in `addressMatches`
-- if there is a match, let's print it and see what's in it
-- we need the `coordinates` dict
-- latitude and longitude are returned as `y` and `x`
-- add a count for addresses that don't match
-- enter blank values for lat/lon so we can still write a proper csv (and come back to those later)
-- create a csvwriter and output file
-- enter headers + new column names
-- write each row as we get it
-
-
-things to improve
-- speed
-- quit/resume
-- enable batching
-- parse addresses to remove junk (usaddress)
-
-
-batching
-- more complicated (can't just do url parameters)
-- have to upload a file
-- let's parse first
-- one thing you would have to do is write original file with new id field to join new addresses to original data
+- I've written three scripts in the `_scripts` directory that you can use as reference during the NICAR class
+- `_geocode.py` uses the one-line address endpoint
+- `_parse_addresses.py` parses one-line addresses into component parts for use with the batch geocoder
+- `_geocode_batch.py` uses the batch geocoder
+- You can use these scripts too — just change the input and output filenames and make sure your data is correctly formatted.

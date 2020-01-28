@@ -8,8 +8,8 @@ params = {
     'format':'json'
 }
 
-with open('pharma-locations.csv','r') as data_file:
-    with open('pharma-locations-geo.csv','w') as output_file:
+with open('data/pharma-locations.csv','r') as data_file:
+    with open('data/pharma-locations-geo.csv','w') as output_file:
         csv_reader = csv.reader(data_file)
         headers = next(csv_reader,None)
         new_headers = headers + ['latitude','longitude']

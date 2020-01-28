@@ -1,8 +1,8 @@
 import csv
 import usaddress
 
-with open('pharma-locations.csv','r') as infile:
-    with open('pharma-locations-parsed.csv','w') as outfile:
+with open('data/pharma-locations.csv','r') as infile:
+    with open('data/pharma-locations-parsed.csv','w') as outfile:
         csv_reader = csv.reader(infile)
         headers = next(csv_reader,None)
         new_headers = ['id','street','city','state','zip']

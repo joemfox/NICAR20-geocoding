@@ -1,5 +1,9 @@
 certifi==2019.11.28
 chardet==3.0.4
+future==0.18.2
 idna==2.8
+probableparsing==0.0.1
+python-crfsuite==0.9.6
 requests==2.22.0
 urllib3==1.25.8
+usaddress==0.5.10
